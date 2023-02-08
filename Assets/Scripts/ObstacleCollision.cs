@@ -11,5 +11,7 @@ public class ObstacleCollision : MonoBehaviour
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
         player.GetComponent<PlayerMovement>().enabled = false;
         charModel.GetComponent<Animator>().Play("Stumble Backwards");
+        GameObject.Find("TimerTracker").SendMessage("Finish");
+
     }
 }

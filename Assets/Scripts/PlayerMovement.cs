@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject charModel;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isMoving = false;
                 charModel.GetComponent<Animator>().Play("Idle"); 
+
             }
         }
     }
