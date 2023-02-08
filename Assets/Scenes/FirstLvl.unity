@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &83398287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -472,6 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &105497349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8957304962413023527, guid: 3f9b178ccd3b86f4ebbfc1f5a2815e56, type: 3}
@@ -861,6 +863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &387354810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1254,6 +1257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &455471976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1563,6 +1567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &551495278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3294,13 +3299,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1077578619}
+  - component: {fileID: 1077578620}
   m_Layer: 5
   m_Name: EndGameScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1077578619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3322,6 +3328,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1077578620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077578618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923b73cfdf94df840a23778081f768d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contextText: {fileID: 1247548345}
+  endTimer: {fileID: 67081721}
+  initialTimer: {fileID: 417804124}
+  background: {fileID: 695739493}
 --- !u!1 &1084489610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1576488453971893466, guid: a778b631c6253a04899cb31bad047c81, type: 3}
@@ -3460,6 +3482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &1145208767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90df3b47e569ba74d9e40098aeb1558f, type: 3}
@@ -3514,6 +3537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &1160573491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5186735023776687486, guid: ac8efb728f1fb9b4092c4df591c827ca, type: 3}
@@ -3538,6 +3562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!4 &1165733634 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}
@@ -3693,6 +3718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &1247548343
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,6 +3878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &1297932070 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5186735023776687486, guid: ac8efb728f1fb9b4092c4df591c827ca, type: 3}
@@ -3876,6 +3903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &1313378936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4440,6 +4468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &1575971307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4778,6 +4807,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1 &1648181377
 GameObject:
   m_ObjectHideFlags: 0
@@ -4910,6 +4940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &1758468909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5229,6 +5260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!1001 &1877167235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5701,6 +5733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 870245553}
   charModel: {fileID: 1145208767}
+  endContextMessage: Congratulations! You have reached the end.
 --- !u!4 &2119819027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1279437348525638701, guid: e2e682b966e3f644392ffbfab511e0e2, type: 3}

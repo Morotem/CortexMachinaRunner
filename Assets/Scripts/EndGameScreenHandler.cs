@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EndGameScreenHandler : MonoBehaviour
@@ -26,11 +27,13 @@ public class EndGameScreenHandler : MonoBehaviour
         
     }
 
-    public void Display(string contextText){
+    IEnumerator Display(string contextText){
         this.background.SetActive(true);
         this.contextText.enabled = true;
         this.endTimer.enabled = true;
-        
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene(0);
+
 
         endTimer.text = "Timer : " + initialTimer.text + "s";
         this.contextText.text = contextText;
