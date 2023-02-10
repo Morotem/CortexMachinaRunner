@@ -347,7 +347,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637418199}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: GoToLevelWithObstacle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -481,7 +481,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637418199}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: GoToLevelWithoutObstacle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

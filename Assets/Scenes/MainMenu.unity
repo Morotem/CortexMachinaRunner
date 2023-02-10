@@ -1735,6 +1735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   charModel: {fileID: 0}
+  contextMessage: So... You can't control yourself right ?
+  animationName: Stumble Backwards
 --- !u!65 &1441287551
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1834,7 +1836,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1552106853}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2101,6 +2103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   charModel: {fileID: 0}
+  contextMessage: So... You can't control yourself right ?
+  animationName: Stumble Backwards
 --- !u!65 &1644786691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2268,7 +2272,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1552106853}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_MethodName: GoToLevelChoice
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2693,6 +2697,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   charModel: {fileID: 0}
+  contextMessage: So... You can't control yourself right ?
+  animationName: Stumble Backwards
 --- !u!65 &1867562627
 BoxCollider:
   m_ObjectHideFlags: 0
