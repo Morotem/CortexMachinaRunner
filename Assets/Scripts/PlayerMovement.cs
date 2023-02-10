@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,25 +15,28 @@ public class PlayerMovement : MonoBehaviour
     public float centerPositionOnX;
     public bool isMoving = false;
     public GameObject charModel;
-
-
+    private Scene scene;
+    public int indexOfScene = 2; 
 
     // Start is called before the first frame update
     void Start()
     {
        centerPositionOnX = transform.position.x;
+       scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
     void Update()
     {
         HandleMoveForward();
-        HandleChangeDirection();
-        
+        if(scene.buildIndex != indexOfScene){
+            HandleChangeDirection();
+        }
     }
 
     void HandleMoveForward()
     {
+        
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             concentration = concentration - valueOfConcentrationChange < MIN_CONCENTRATION_VALUE ? 
@@ -62,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleChangeDirection()
     {
+        
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
@@ -80,5 +85,7 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
         }
+        
+        
     }
 }
