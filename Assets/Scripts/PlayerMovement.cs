@@ -10,10 +10,13 @@ public class PlayerMovement : MonoBehaviour
     public const float MIN_CONCENTRATION_TO_MOVE = 20f;
     public const float MAX_CONCENTRATION_VALUE = 100f;
     public const float MIN_CONCENTRATION_VALUE = 0f;
+    public const float MAX_CONCENTRATION_TO_DESTROY_WALL = 5f;
     public const float DIRECTION_OFFSET = 2;
     public float centerPositionOnX;
     public bool isMoving = false;
     public GameObject charModel;
+    private bool needToRun = false;
+    public GameObject WallToDestroy;
 
 
 
@@ -26,13 +29,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        handleConcentrationValueChange();
+        if(!needToRun) {
+            if (concentration <= MAX_CONCENTRATION_TO_DESTROY_WALL){
+                WallToDestroy.SetActive(false);
+                needToRun = true;
+            }
+            return;
+        }
         HandleMoveForward();
         HandleChangeDirection();
         
     }
 
-    void HandleMoveForward()
-    {
+    void handleConcentrationValueChange(){
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             concentration = concentration - valueOfConcentrationChange < MIN_CONCENTRATION_VALUE ? 
@@ -42,7 +52,10 @@ public class PlayerMovement : MonoBehaviour
             concentration = concentration + valueOfConcentrationChange > MAX_CONCENTRATION_VALUE ? 
                             MAX_CONCENTRATION_VALUE : concentration + valueOfConcentrationChange;
         }
+    }
 
+    void HandleMoveForward()
+    {
         if(concentration > MIN_CONCENTRATION_TO_MOVE){
             if(isMoving == false){
                 isMoving = true;
