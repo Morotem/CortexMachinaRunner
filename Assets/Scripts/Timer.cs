@@ -9,11 +9,12 @@ public class Timer : MonoBehaviour
     public TextMeshProUGUI textComponent;
     private bool finished = false;
     
-    //private float startTime;
+    private float startTime;
     // Start is called before the first frame update
     void Start()
     {
-        //startTime = Time.time;
+        startTime = Time.time;
+        
 
     }
 
@@ -21,13 +22,13 @@ public class Timer : MonoBehaviour
     void Update()
     {
         if(finished) return;
-        //float chrono = Time.time - startTime;
-        float currentTime = Time.time;
-        TimeSpan time = TimeSpan.FromSeconds(currentTime);
-        textComponent.text = time.ToString("mm':'ss':'fff");
-        // string minutes = ((int)chrono / 60).ToString();
-        // string seconds = (chrono % 60).ToString("f2");
-        // textComponent.text = minutes + ":" + seconds + "s";
+        float chrono = Time.time - startTime;
+        //float currentTime = Time.time;
+        //TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        //textComponent.text = time.ToString("mm':'ss':'fff");
+        string minutes = ((int)chrono / 60).ToString();
+        string seconds = (chrono % 60).ToString("f3");
+        textComponent.text = minutes + ":" + seconds + "";
     }
 
     public void Finish()

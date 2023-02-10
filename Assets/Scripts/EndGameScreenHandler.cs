@@ -27,15 +27,14 @@ public class EndGameScreenHandler : MonoBehaviour
         
     }
 
-    IEnumerator Display(string contextText){
+    IEnumerator Display(string newContextText){
         this.background.SetActive(true);
         this.contextText.enabled = true;
         this.endTimer.enabled = true;
+        endTimer.text = "Timer : " + initialTimer.text + "s";
+        
+        this.contextText.text = newContextText;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene(0);
-
-
-        endTimer.text = "Timer : " + initialTimer.text + "s";
-        this.contextText.text = contextText;
     }
 }

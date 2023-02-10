@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleCollision : MonoBehaviour
+public class ObstacleCollision : Collisionable
 {
-    public GameObject player;  
-    public GameObject charModel;  
-  
-    void OnTriggerEnter(Collider other) {
-        this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        player.GetComponent<PlayerMovement>().enabled = false;
-        charModel.GetComponent<Animator>().Play("Stumble Backwards");
-        GameObject.Find("TimerTracker").SendMessage("Finish");
+    public string contextMessage = "So... You can't control yourself right ?";
+    public string animationName = "Stumble Backwards";
+    public override void displayEndScreen()
+    {
+        GameObject endScreen = GameObject.Find("EndGameScreen");
+        endScreen.SetActive(true);
+        endScreen.SendMessage("Display", contextMessage);
+    }
 
+    public override void PlayAnimation()
+    {
+        charModel.GetComponent<Animator>().Play(animationName);
     }
 }
