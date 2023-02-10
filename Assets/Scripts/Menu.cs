@@ -1,25 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void PlayGame()
     {
-        SceneManager.LoadScene(1);
-        
+        string ClickedButtonName = EventSystem.current.currentSelectedGameObject.name;
+        Debug.Log(ClickedButtonName);
+        if(ClickedButtonName == "Scene1" || ClickedButtonName == "PlayButton"){
+            SceneManager.LoadScene(1);
+        }
+        if(ClickedButtonName == "Scene2"){
+            SceneManager.LoadScene(2);
+        }       
     }
 }
