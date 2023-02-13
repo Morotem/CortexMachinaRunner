@@ -14,10 +14,6 @@ public abstract class Collisionable : MonoBehaviour
         PlayAnimation();
         displayEndScreen();
         //display endScreen
-        
-        
-        
-
     }
 
     public abstract void displayEndScreen();
