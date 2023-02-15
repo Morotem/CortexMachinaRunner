@@ -19,13 +19,15 @@ public class PlayerMovement : MonoBehaviour
     private Scene scene;
     public int indexOfScene = 2; 
 
-    private bool needToRun = false;
+    private bool needToRun;
     public GameObject WallToDestroy;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+        needToRun = (scene.buildIndex == 2);
        centerPositionOnX = transform.position.x;
        scene = SceneManager.GetActiveScene();
     }
