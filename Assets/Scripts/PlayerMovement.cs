@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 3;
     public float concentration = 10f;
+    public int RestfullnessWeight;
     public float valueOfConcentrationChange = 5f;
     public const float MIN_CONCENTRATION_TO_MOVE = 20f;
     public const float MAX_CONCENTRATION_VALUE = 100f;
@@ -36,10 +38,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        handleRestfullnessValueChanged();
         HandleConcentrationValueChange();
         if(isInFrontOfFire)return;
         if(!needToRun) {
-            if (concentration <= MAX_CONCENTRATION_TO_DESTROY_WALL){
+            if (RestfullnessWeight == 1){
                 WallToDestroy.SetActive(false);
                 needToRun = true;
             }
@@ -51,6 +54,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void handleRestfullnessValueChanged()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            RestfullnessWeight = RestfullnessWeight == 0 ? 1 : 0;
+        }
+    }
 
     void HandleConcentrationValueChange(){
         if (Input.GetKeyDown(KeyCode.DownArrow))
