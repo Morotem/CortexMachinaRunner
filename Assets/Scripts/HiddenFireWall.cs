@@ -5,6 +5,7 @@ using UnityEngine;
 public class HiddenFireWall : MonoBehaviour
 {
     public PlayerMovement player;
+    public Timer timer;
     private bool isStoppingPlayer = false;
     public const float CONCENTRATION_REQUIRED = 40f;
     public GameObject[] smokeGrey;
@@ -35,9 +36,11 @@ public class HiddenFireWall : MonoBehaviour
         player.isInFrontOfFire = true;
         isStoppingPlayer = true;
         player.MakePlayerStop();
+        PauseGame();
         Debug.Log("stop");
+        
     }
-
+    
     void ActiveFire(){
         foreach(GameObject purple in smokePurple){
             purple.SetActive(true);
@@ -54,6 +57,12 @@ public class HiddenFireWall : MonoBehaviour
             grey.SetActive(true);
         }
     }
+    public void PauseGame()
+    {
+        player.enabled = false;
+        timer.PauseTimer();
+    }
+
 
 
 }

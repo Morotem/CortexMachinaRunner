@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TutoScreenScript : MonoBehaviour
 {
     public Timer timer;
@@ -21,7 +22,14 @@ public class TutoScreenScript : MonoBehaviour
 
     public void BeginGame(){
         player.enabled = true;
-        timer.beginTimer();
+        timer.BeginTimer();
         this.gameObject.SetActive(false);
     }
+
+    public void ResumeGame()
+    {
+        player.enabled = true;
+        timer.ResumeTimer();
+    }
+
 }
