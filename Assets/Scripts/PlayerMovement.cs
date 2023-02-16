@@ -23,7 +23,17 @@ public class PlayerMovement : MonoBehaviour
     private bool needToRun;
     public GameObject WallToDestroy;
     public bool isInFrontOfFire;
-    
+    private Lvl4Dto dtoReceived = new Lvl4Dto{
+            ConcentrationRatio = 0,
+            RestfullnessWeight = 0,
+            emotions = null,
+            motion = new MotionWeight{
+                Left = 0,
+                Neutral = 1,
+                Right = 0
+
+            }
+        };
 
 
     // Start is called before the first frame update
@@ -104,23 +114,41 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleChangeDirection()
     {
+        //this part will be removed when we will get input from Headset
+        ///////////////////////////////
+        
         
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
+            Debug.Log("change value");
+            dtoReceived.motion.Left = 1;
+            //transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
 
         } else if(Input.GetKeyUp(KeyCode.LeftArrow))
         {
-            transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
+            dtoReceived.motion.Left = 0;
+            //transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
         }
         
 
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
-            transform.position = new Vector3(centerPositionOnX + DIRECTION_OFFSET, transform.position.y, transform.position.z);
+            dtoReceived.motion.Right = 1;
+            //transform.position = new Vector3(centerPositionOnX + DIRECTION_OFFSET, transform.position.y, transform.position.z);
 
         }else if(Input.GetKeyUp(KeyCode.RightArrow))
         {
+            dtoReceived.motion.Right = 0;
+            //transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
+        }
+        /////////////////////////////////////////
+
+        if(dtoReceived.motion.Left == 1){
+            Debug.Log("dir change");
+            transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
+        }else if(dtoReceived.motion.Right == 1){
+            transform.position = new Vector3(centerPositionOnX + DIRECTION_OFFSET, transform.position.y, transform.position.z);
+        }else{
             transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
         }
         
