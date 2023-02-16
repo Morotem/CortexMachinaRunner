@@ -10,18 +10,16 @@ public class Timer : MonoBehaviour
     private bool finished = false;
     
     private float startTime;
+    public bool gameStarted = false;
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(finished) return;
+        if(finished || !gameStarted) return;
         float chrono = Time.time - startTime;
         //float currentTime = Time.time;
         //TimeSpan time = TimeSpan.FromSeconds(currentTime);
@@ -35,6 +33,11 @@ public class Timer : MonoBehaviour
     {
         finished = true;
         textComponent.color = Color.yellow;
+    }
+
+    public void beginTimer(){
+        gameStarted = true;
+        startTime = Time.time;
     }
 
 }
