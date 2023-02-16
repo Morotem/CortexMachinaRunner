@@ -18,24 +18,26 @@ public class PlayerMovement : MonoBehaviour
     public GameObject charModel;
     private Scene scene;
     public int indexOfScene = 2; 
-
     private bool needToRun;
     public GameObject WallToDestroy;
+    public bool isInFrontOfFire;
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
         scene = SceneManager.GetActiveScene();
-        needToRun = (scene.buildIndex == 2);
-       centerPositionOnX = transform.position.x;
-       scene = SceneManager.GetActiveScene();
+        needToRun = (scene.buildIndex == indexOfScene);
+        centerPositionOnX = transform.position.x;
+        isInFrontOfFire = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        handleConcentrationValueChange();
+        HandleConcentrationValueChange();
+        if(isInFrontOfFire)return;
         if(!needToRun) {
             if (concentration <= MAX_CONCENTRATION_TO_DESTROY_WALL){
                 WallToDestroy.SetActive(false);
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void handleConcentrationValueChange(){
+    void HandleConcentrationValueChange(){
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             concentration = concentration - valueOfConcentrationChange < MIN_CONCENTRATION_VALUE ? 
@@ -66,19 +68,28 @@ public class PlayerMovement : MonoBehaviour
     {
         if(concentration > MIN_CONCENTRATION_TO_MOVE){
             if(isMoving == false){
-                isMoving = true;
-                charModel.GetComponent<Animator>().Play("Run"); 
+                MakePlayerRun();
+                
             }
             transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime * (concentration/10));
+            
         }else 
         {
             if(isMoving == true)
             {
-                isMoving = false;
-                charModel.GetComponent<Animator>().Play("Idle"); 
+                MakePlayerStop();
 
             }
         }
+    }
+    public void MakePlayerStop(){
+        isMoving = false;
+        charModel.GetComponent<Animator>().Play("Idle"); 
+    }
+    public void MakePlayerRun(){
+        isMoving = true;
+        charModel.GetComponent<Animator>().Play("Run");
+        Debug.Log("run");
     }
 
     void HandleChangeDirection()
