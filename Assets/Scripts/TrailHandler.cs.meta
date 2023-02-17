@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5b72c9622a7b8294dae1b5569b93b1c4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - excitedTrail: {fileID: 15112338033050846, guid: df66dd78d2cbe2842954712b7e26974e, type: 3}
+  - happyTrail: {fileID: 15112338033050846, guid: 8d69dbced65c0794fbe7ce46b175533b, type: 3}
+  - positiveMoodTrail: {fileID: 15112338033050846, guid: f345d5b58bc3dbb45a1f413883f785ad, type: 3}
+  - negativeMoodTrail: {fileID: 15112338033050846, guid: fd9631a72e35b9846b06c8eaacb00113, type: 3}
+  - sadTrail: {fileID: 15112338033050846, guid: 05eadbb267e1ab34180ce60a2ad07b01, type: 3}
+  - hateTrail: {fileID: 15112338033050846, guid: e0e54683da33ee84fb26fd1c1921ebd1, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
