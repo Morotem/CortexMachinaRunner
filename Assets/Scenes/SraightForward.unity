@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.036056414, g: 0.038822044, b: 0.0513754, a: 1}
+  m_IndirectSpecularColor: {r: 0.33362865, g: 0.38930085, b: 0.41935113, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4308,12 +4308,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   concentration: 10
+  RestfullnessWeight: 0
   valueOfConcentrationChange: 5
   centerPositionOnX: 0
   isMoving: 0
   charModel: {fileID: 1145208767}
-  indexOfScene: 2
+  indexOfScene: 3
   WallToDestroy: {fileID: 0}
+  isInFrontOfFire: 0
 --- !u!65 &870245555
 BoxCollider:
   m_ObjectHideFlags: 0

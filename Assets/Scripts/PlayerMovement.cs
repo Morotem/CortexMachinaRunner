@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     public GameObject charModel;
     private Scene scene;
-    public int indexOfScene = 2; 
+    public int indexOfScene = 3; 
     private bool needToRun;
     public GameObject WallToDestroy;
     public bool isInFrontOfFire;

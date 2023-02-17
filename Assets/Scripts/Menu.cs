@@ -12,14 +12,24 @@ public class Menu : MonoBehaviour
     public void GoToLevelChoice(){
         SceneManager.LoadScene(1);
     }
-    public void GoToLevelWithObstacle(){
+    public void AdminMenu(){
+        SceneManager.LoadScene(2);
+    }
+    public void StrainghtRace(){
         SceneManager.LoadScene(3);
     }
-    public void GoToLevelWithoutObstacle(){
-        SceneManager.LoadScene(2);
+    public void ChillRun(){
+        SceneManager.LoadScene(4);
+    }
+    public void SidestepChallenge(){
+        SceneManager.LoadScene(5);
+    }
+    public void MenuReturn(){
+        SceneManager.LoadScene(0);
     }
     public void QuitGame(){
         Application.Quit();
         EditorApplication.isPlaying = false;
     }
+    
 }
