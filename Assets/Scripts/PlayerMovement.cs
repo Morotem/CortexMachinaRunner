@@ -120,7 +120,6 @@ public class PlayerMovement : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.Log("change value");
             dtoReceived.motion.Left = 1;
             //transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
 
@@ -144,7 +143,6 @@ public class PlayerMovement : MonoBehaviour
         /////////////////////////////////////////
 
         if(dtoReceived.motion.Left == 1){
-            Debug.Log("dir change");
             transform.position = new Vector3(centerPositionOnX - DIRECTION_OFFSET, transform.position.y, transform.position.z);
         }else if(dtoReceived.motion.Right == 1){
             transform.position = new Vector3(centerPositionOnX + DIRECTION_OFFSET, transform.position.y, transform.position.z);
