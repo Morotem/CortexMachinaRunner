@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/ChoiceScene.unity
     guid: 1264212acb4a8d143896734a35bf5199
   - enabled: 1
-    path: Assets/Scenes/Lvl0.unity
+    path: Assets/Scenes/SraightForward.unity
     guid: 3f00a47a379e1424ca250bb77617c885
   - enabled: 1
-    path: Assets/Scenes/FirstLvl.unity
+    path: Assets/Scenes/SidestepChallenge.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
