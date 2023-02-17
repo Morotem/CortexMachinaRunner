@@ -8,7 +8,10 @@ using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
 {
-
+    void Start() {
+        toggle.onValueChanged.AddListener(OnToggleValueChanged);
+    }
+    public Toggle toggle;
     public void GoToLevelChoice(){
         SceneManager.LoadScene(1);
     }
@@ -31,5 +34,13 @@ public class Menu : MonoBehaviour
         Application.Quit();
         EditorApplication.isPlaying = false;
     }
+    public void OnToggleValueChanged(bool value)
+{
+    GameObject button = GameObject.Find("StrainghtRace");
+    if (button != null)
+    {
+        button.SetActive(value);
+    }
+}
     
 }
