@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 66f69a60280cbc74c936bd0e7858f113
   - enabled: 1
-    path: Assets/Scenes/ChoiceScene 1.unity
+    path: Assets/Scenes/ChoiceScene.unity
     guid: 98cf941193e46a84389c3aa4223f1713
   - enabled: 1
     path: Assets/Scenes/AdminMenu.unity
