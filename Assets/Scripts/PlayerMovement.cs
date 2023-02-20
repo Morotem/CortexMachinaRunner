@@ -19,7 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     public GameObject charModel;
     private Scene scene;
-    public int indexOfScene = 2; 
+    public int indexOfStraightForwardScene = 2; 
+    public int indexOfSideStepChallengeScene = 3;
     private bool needToRun;
     public GameObject WallToDestroy;
     public bool isInFrontOfFire;
@@ -40,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         scene = SceneManager.GetActiveScene();
-        needToRun = (scene.buildIndex == indexOfScene);
+        needToRun = (scene.buildIndex == indexOfStraightForwardScene);
         centerPositionOnX = transform.position.x;
         isInFrontOfFire = false;
     }
@@ -59,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
         HandleMoveForward();
-        if(scene.buildIndex != indexOfScene){
+        if(scene.buildIndex == indexOfSideStepChallengeScene){
             HandleChangeDirection();
         }
     }
