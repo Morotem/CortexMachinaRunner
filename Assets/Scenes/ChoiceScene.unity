@@ -274,8 +274,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -609,8 +609,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -922,7 +922,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -300}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451331506
 MonoBehaviour:
@@ -946,7 +946,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
-    m_HighlightedColor: {r: 0.31764707, g: 0.31764707, b: 0.31764707, a: 0.8392157}
+    m_HighlightedColor: {r: 1, g: 0.023949157, b: 0, a: 0.8392157}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1027,9 +1027,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 451331504}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f79a4c8e4b717042a21feb87a57ab37, type: 3}
+  m_Script: {fileID: 11500000, guid: 75a0c0c1bd9a7a741a6babacf5ce0213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 849497118}
+  description: Run straight ahead to the finish line in this simple yet challenging
+    level.
+  nameOfLevel: Straight Race
 --- !u!1001 &494351297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1307,7 +1311,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -900}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 450, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813574072
 MonoBehaviour:
@@ -1551,7 +1555,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000015258789}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -161.8, y: -7.6499996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849497118
 MonoBehaviour:
@@ -1602,8 +1606,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2186,6 +2190,7 @@ GameObject:
   - component: {fileID: 1240510351}
   - component: {fileID: 1240510350}
   - component: {fileID: 1240510349}
+  - component: {fileID: 1240510352}
   m_Layer: 5
   m_Name: Emotion Odyssey
   m_TagString: Untagged
@@ -2212,7 +2217,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -600}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1240510349
 MonoBehaviour:
@@ -2308,6 +2313,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240510347}
   m_CullTransparentMesh: 1
+--- !u!114 &1240510352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240510347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a0c0c1bd9a7a741a6babacf5ce0213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 150104758}
+  description: The scenery changes based on your emotions, making each playthrough
+    unique.
+  nameOfLevel: Emotion Odyssey
 --- !u!1 &1259702145
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2341,7 @@ GameObject:
   - component: {fileID: 1259702149}
   - component: {fileID: 1259702148}
   - component: {fileID: 1259702147}
+  - component: {fileID: 1259702150}
   m_Layer: 5
   m_Name: Sidestep Challenge
   m_TagString: Untagged
@@ -2346,7 +2368,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -750}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1259702147
 MonoBehaviour:
@@ -2442,6 +2464,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1259702145}
   m_CullTransparentMesh: 1
+--- !u!114 &1259702150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259702145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a0c0c1bd9a7a741a6babacf5ce0213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1979260945}
+  description: Dodge obstacles while moving your character left and right to avoid
+    obstacles and reach the finish line. Are you ready for the final challenge?
+  nameOfLevel: Sidestep Challenge
 --- !u!1 &1530003845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2794,6 +2832,7 @@ GameObject:
   - component: {fileID: 1787421078}
   - component: {fileID: 1787421077}
   - component: {fileID: 1787421076}
+  - component: {fileID: 1787421079}
   m_Layer: 5
   m_Name: Chill Run
   m_TagString: Untagged
@@ -2820,7 +2859,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -450}
-  m_SizeDelta: {x: 300, y: 30}
+  m_SizeDelta: {x: 450, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787421076
 MonoBehaviour:
@@ -2916,6 +2955,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1787421074}
   m_CullTransparentMesh: 1
+--- !u!114 &1787421079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787421074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a0c0c1bd9a7a741a6babacf5ce0213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 261474641}
+  description: In this level, you will need to show patience and self-control to
+    overcome the fires to reach the finish line.
+  nameOfLevel: Chill Run
 --- !u!1001 &1843761159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3216,8 +3271,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
