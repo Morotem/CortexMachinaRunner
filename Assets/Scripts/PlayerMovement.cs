@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private Scene scene;
     public int indexOfStraightForwardScene = 2; 
     public int indexOfSideStepChallengeScene = 3;
+
     private bool needToRun;
     public GameObject WallToDestroy;
     public bool isInFrontOfFire;
