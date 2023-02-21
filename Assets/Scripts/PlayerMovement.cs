@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     public GameObject charModel;
     private Scene scene;
-    public int indexOfStraightForwardScene = 3; 
+    public int indexOfStraightForwardScene = 7; 
     public int indexOfSideStepChallengeScene = 6;
 
     private bool needToRun;

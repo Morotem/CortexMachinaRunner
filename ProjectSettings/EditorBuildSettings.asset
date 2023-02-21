@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SideStepChallenge.unity
     guid: 389386d36d10478489ed88be2479c7a0
+  - enabled: 1
+    path: Assets/Scenes/level1Try.unity
+    guid: d70389ecf3e93d7459fb93e518bd2870
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
