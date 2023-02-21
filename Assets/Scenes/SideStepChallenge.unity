@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.46467683, g: 0.1364827, b: 0.00444367, a: 1}
+  m_IndirectSpecularColor: {r: 0.7100044, g: 0.624411, b: 0.3522042, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5890,8 +5890,8 @@ MonoBehaviour:
   centerPositionOnX: 0
   isMoving: 0
   charModel: {fileID: 1145208767}
-  indexOfStraightForwardScene: 2
-  indexOfSideStepChallengeScene: 3
+  indexOfStraightForwardScene: 3
+  indexOfSideStepChallengeScene: 6
   WallToDestroy: {fileID: 472817857}
   isInFrontOfFire: 0
 --- !u!65 &870245555
