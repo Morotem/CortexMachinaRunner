@@ -7,14 +7,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
 public class Menu : MonoBehaviour
-{
-
-    public Toggle cbStraightRace;
-    public GameObject straightRace;
-    public void TrueFalseChecker(){
-        if(cbStraightRace.isOn == true)  straightRace.SetActive(true);
-        else if(cbStraightRace.isOn == false) straightRace.SetActive(false);
-    }
+{   
     public void GoToLevelChoice(){
         SceneManager.LoadScene(1);
     }
