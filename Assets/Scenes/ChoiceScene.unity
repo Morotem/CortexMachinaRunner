@@ -970,7 +970,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637418199}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: StrainghtRace
+        m_MethodName: StraightRace
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1239,6 +1239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637418200}
   - component: {fileID: 637418199}
+  - component: {fileID: 637418201}
   m_Layer: 0
   m_Name: MenuHandler
   m_TagString: Untagged
@@ -1258,8 +1259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f79a4c8e4b717042a21feb87a57ab37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cbStraightRace: {fileID: 0}
-  straightRace: {fileID: 451331504}
 --- !u!4 &637418200
 Transform:
   m_ObjectHideFlags: 0
@@ -1275,6 +1274,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &637418201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637418198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2274c8644e417a44f8251e97d400184f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  straightRaceBtn: {fileID: 451331504}
+  chillRunBtn: {fileID: 1787421074}
+  emotionOdysseyBtn: {fileID: 1240510347}
+  sideStepChallengeBtn: {fileID: 1259702145}
 --- !u!1 &813574070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,7 +2282,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637418199}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: GoToLevelWithObstacle
+        m_MethodName: EmotionOdyssey
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

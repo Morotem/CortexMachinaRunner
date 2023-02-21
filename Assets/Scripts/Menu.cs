@@ -20,8 +20,11 @@ public class Menu : MonoBehaviour
     public void ChillRun(){
         SceneManager.LoadScene(4);
     }
-    public void SidestepChallenge(){
+    public void EmotionOdyssey(){
         SceneManager.LoadScene(5);
+    }
+    public void SidestepChallenge(){
+        SceneManager.LoadScene(6);
     }
     public void MenuReturn(){
         SceneManager.LoadScene(0);
