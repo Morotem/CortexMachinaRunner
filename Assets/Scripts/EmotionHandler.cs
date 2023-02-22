@@ -20,10 +20,9 @@ public class EmotionHandler : MonoBehaviour
     public Sprite hateSprite;
 
     private EmotionState state;
-    //initialisation by clicking on the "understood" button of TutoScreen
     private float beginTimeOfCurrentState;
 
-    public int stateDuration;
+    public int stateDuration = 5;
 
     public EmotionWeight emotions = new EmotionWeight{
         Excited = 0,
@@ -36,6 +35,8 @@ public class EmotionHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        beginTimeOfCurrentState = Time.time;
+        state = new NeutralEmotionState();
         desactiveAllTrails();
     }
 
@@ -45,6 +46,7 @@ public class EmotionHandler : MonoBehaviour
         manageInput();
        
         if(needToVerifyEmotions()){
+            Debug.Log("Timer up");
             if(state.GetType() == typeof(NeutralEmotionState)){
                 state = isIntense() ? new IntenseEmotionState() : new NonIntenseEmotionState();
             }
@@ -147,7 +149,10 @@ public class EmotionHandler : MonoBehaviour
     }
 
     public bool needToVerifyEmotions(){
-        if(Time.time - beginTimeOfCurrentState >= stateDuration){
+        float elapsedTimeAsSeconds = (Time.time - beginTimeOfCurrentState) % 60;
+        Debug.Log(elapsedTimeAsSeconds + " " + stateDuration);
+        if(elapsedTimeAsSeconds >= stateDuration){
+            resetBeginTimeOfCurrentState();
             return true;
         }
         return false;
