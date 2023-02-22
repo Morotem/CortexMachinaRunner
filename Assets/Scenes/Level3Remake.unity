@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17225231, g: 0.46466595, b: 0.49285987, a: 1}
+  m_IndirectSpecularColor: {r: 0.044770483, g: 0.22690912, b: 0.010504311, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2541,7 +2541,6 @@ GameObject:
   - component: {fileID: 870245555}
   - component: {fileID: 870245554}
   - component: {fileID: 870245559}
-  - component: {fileID: 870245560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2673,31 +2672,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &870245560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870245553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b72c9622a7b8294dae1b5569b93b1c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  excitedTrail: {fileID: 2087590750}
-  happyTrail: {fileID: 1979812711}
-  positiveMoodTrail: {fileID: 1407140733}
-  negativeMoodTrail: {fileID: 542156134}
-  sadTrail: {fileID: 697987630}
-  hateTrail: {fileID: 1862044790}
-  emojiImage: {fileID: 585306362}
-  excitedSprite: {fileID: 21300000, guid: 5a90779644c750141aae32bef140434e, type: 3}
-  happySprite: {fileID: 21300000, guid: 57e79282f77e21e4392d46820163df6a, type: 3}
-  positiveSprite: {fileID: 21300000, guid: b70756afc9e9fe744ae37651de444477, type: 3}
-  negativeSprite: {fileID: 21300000, guid: 7495f72f4bb32004daa41c895da31a05, type: 3}
-  sadSprite: {fileID: 21300000, guid: adc27926728985a4a9471783f875ab03, type: 3}
-  hateSprite: {fileID: 21300000, guid: 1e23e6eaca5eff44badcff65d711b90c, type: 3}
 --- !u!1001 &873938218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3842,6 +3816,64 @@ MonoBehaviour:
   prefixe: 
   textComponent: {fileID: 421668230}
   slider: {fileID: 1889730590}
+--- !u!1 &1388230974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388230976}
+  - component: {fileID: 1388230975}
+  m_Layer: 0
+  m_Name: EmotionHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1388230975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388230974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b72c9622a7b8294dae1b5569b93b1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  excitedTrail: {fileID: 2087590750}
+  happyTrail: {fileID: 1979812711}
+  positiveMoodTrail: {fileID: 1407140733}
+  negativeMoodTrail: {fileID: 542156134}
+  sadTrail: {fileID: 697987630}
+  hateTrail: {fileID: 1862044790}
+  emojiImage: {fileID: 585306362}
+  excitedSprite: {fileID: 21300000, guid: 5a90779644c750141aae32bef140434e, type: 3}
+  happySprite: {fileID: 21300000, guid: 57e79282f77e21e4392d46820163df6a, type: 3}
+  positiveSprite: {fileID: 21300000, guid: b70756afc9e9fe744ae37651de444477, type: 3}
+  negativeSprite: {fileID: 21300000, guid: 7495f72f4bb32004daa41c895da31a05, type: 3}
+  sadSprite: {fileID: 21300000, guid: adc27926728985a4a9471783f875ab03, type: 3}
+  hateSprite: {fileID: 21300000, guid: 1e23e6eaca5eff44badcff65d711b90c, type: 3}
+  stateDuration: 5
+--- !u!4 &1388230976
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388230974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 485.8, y: 267, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1390377524
 GameObject:
   m_ObjectHideFlags: 0
