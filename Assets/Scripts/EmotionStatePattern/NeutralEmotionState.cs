@@ -1,0 +1,7 @@
+public class NeutralEmotionState : EmotionState
+{
+    public override void initEnvironnement()
+    {
+        sky.SetFloat("_AtmosphereThickness", 0.7f);
+    }
+}
