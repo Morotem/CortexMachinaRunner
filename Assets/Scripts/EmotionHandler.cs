@@ -37,6 +37,7 @@ public class EmotionHandler : MonoBehaviour
     {
         beginTimeOfCurrentState = Time.time;
         state = new NeutralEmotionState();
+        state.initEnvironnement();
         desactiveAllTrails();
     }
 
@@ -51,6 +52,7 @@ public class EmotionHandler : MonoBehaviour
                 state = isIntense() ? new IntenseEmotionState() : new NonIntenseEmotionState();
             }
             else{
+
                 state = new NeutralEmotionState();
             }
             state.initEnvironnement();
