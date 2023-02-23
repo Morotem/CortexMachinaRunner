@@ -17,6 +17,6 @@ public class SkyScript : MonoBehaviour
     {
         sky.SetFloat("_AtmosphereThickness", (player.concentration/20f));
         sky.SetFloat("_Exposure", (player.concentration/20f));
-       DynamicGI.UpdateEnvironment();
+        DynamicGI.UpdateEnvironment();
     }
 }

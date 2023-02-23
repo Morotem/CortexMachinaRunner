@@ -19,6 +19,11 @@ public class EmotionHandler : MonoBehaviour
     public Sprite sadSprite;
     public Sprite hateSprite;
 
+    private EmotionState state;
+    private float beginTimeOfCurrentState;
+
+    public int stateDuration = 5;
+
     public EmotionWeight emotions = new EmotionWeight{
         Excited = 0,
         Happy = 0,
@@ -30,6 +35,9 @@ public class EmotionHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        beginTimeOfCurrentState = Time.time;
+        state = new NeutralEmotionState();
+        state.initEnvironnement();
         desactiveAllTrails();
     }
 
@@ -37,7 +45,18 @@ public class EmotionHandler : MonoBehaviour
     void Update()
     {
         manageInput();
-        handleEmotionCHange();
+       
+        if(needToVerifyEmotions()){
+            Debug.Log("Timer up");
+            if(state.GetType() == typeof(NeutralEmotionState)){
+                state = isIntense() ? new IntenseEmotionState() : new NonIntenseEmotionState();
+            }
+            else{
+
+                state = new NeutralEmotionState();
+            }
+            state.initEnvironnement();
+        }
     }
     void handleEmotionCHange(){
         if(emotions.Excited == 1){
@@ -101,29 +120,42 @@ public class EmotionHandler : MonoBehaviour
 
     void manageInput(){
         if(Input.GetKeyDown(KeyCode.Q)){
-            resetData();
-            emotions.Excited = 1;
+            emotions.Excited = emotions.Excited == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.S)){
-            resetData();
-            emotions.Happy = 1;
+            emotions.Happy = emotions.Happy == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.D)){
-            resetData();
-            emotions.PositiveMood = 1;
+            emotions.PositiveMood = emotions.PositiveMood == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.F)){
-            resetData();
-            emotions.NegativeMood = 1;
+            emotions.NegativeMood = emotions.NegativeMood == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.G)){
-            resetData();
-            emotions.Sad = 1;
+            emotions.Sad = emotions.Sad == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.H)){
-            resetData();
-            emotions.Hate = 1;
+            emotions.Hate = emotions.Hate == 1 ? 0 : 1;
         }
+    }
+
+    public bool isIntense(){
+        if(emotions.Hate == 1 || emotions.Excited == 1) return true;
+        return false;
+    }
+
+    public bool needToVerifyEmotions(){
+        float elapsedTimeAsSeconds = (Time.time - beginTimeOfCurrentState) % 60;
+        Debug.Log(elapsedTimeAsSeconds + " " + stateDuration);
+        if(elapsedTimeAsSeconds >= stateDuration){
+            resetBeginTimeOfCurrentState();
+            return true;
+        }
+        return false;
+    }
+
+    public void resetBeginTimeOfCurrentState(){
+        beginTimeOfCurrentState = Time.time;
     }
 
 
