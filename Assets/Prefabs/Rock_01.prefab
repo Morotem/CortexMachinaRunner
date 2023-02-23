@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 4909322672629594395}
   - component: {fileID: 8214675425048606442}
   - component: {fileID: 5809240244571466064}
-  - component: {fileID: 4177842745950100580}
   m_Layer: 0
   m_Name: Rock_01
   m_TagString: Untagged
@@ -163,19 +162,6 @@ MonoBehaviour:
   charModel: {fileID: 0}
   contextMessage: So... You can't control yourself right ?
   animationName: Stumble Backwards
---- !u!135 &4177842745950100580
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6925109923118676477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.842746
-  m_Center: {x: 0.0000000070677193, y: -0.33467203, z: 0.0000000043359862}
 --- !u!1 &8734143532650926481
 GameObject:
   m_ObjectHideFlags: 0
