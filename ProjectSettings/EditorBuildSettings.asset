@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChillRun.unity
     guid: b4d3b1afee1f1004db8bbec596a4bb03
-  - enabled: 1
-    path: Assets/Scenes/EmotionOdyssey.unity
-    guid: 42d88b9d88cf5b644ace976f14bfdbe0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SideStepChallenge.unity
     guid: 389386d36d10478489ed88be2479c7a0
