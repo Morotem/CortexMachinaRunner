@@ -105,6 +105,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     public void MakePlayerStop(){
+        //put player at center to avoid bugs
+        dtoReceived.motion.Left = 0;
+        dtoReceived.motion.Right = 0;
+        transform.position = new Vector3(centerPositionOnX, transform.position.y, transform.position.z);
+
         isMoving = false;
         charModel.GetComponent<Animator>().Play("Idle"); 
     }
