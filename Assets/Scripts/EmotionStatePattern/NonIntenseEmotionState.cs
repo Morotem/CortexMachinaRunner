@@ -11,6 +11,7 @@ public class NonIntenseEmotionState : EmotionState
     private float fogDensity = 0.015f;
     public override void initEnvironnement()
     {
+        nonIntenseTrail.Play();
         rain.Play();
         sky.SetFloat("_AtmosphereThickness", atmosphereThickness);
         sky.SetFloat("_Exposure", skyExposure);

@@ -12,6 +12,8 @@ public class NeutralEmotionState : EmotionState
     public override void initEnvironnement()
     {
         rain.Stop();
+        intenseTrail.Stop();
+        nonIntenseTrail.Stop();
         sky.SetFloat("_AtmosphereThickness", atmosphereThickness);
         sky.SetFloat("_Exposure", skyExposure);
         sky.SetColor("_SkyTint", skyColor);

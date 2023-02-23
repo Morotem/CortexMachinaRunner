@@ -120,28 +120,22 @@ public class EmotionHandler : MonoBehaviour
 
     void manageInput(){
         if(Input.GetKeyDown(KeyCode.Q)){
-            resetData();
-            emotions.Excited = 1;
+            emotions.Excited = emotions.Excited == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.S)){
-            resetData();
-            emotions.Happy = 1;
+            emotions.Happy = emotions.Happy == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.D)){
-            resetData();
-            emotions.PositiveMood = 1;
+            emotions.PositiveMood = emotions.PositiveMood == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.F)){
-            resetData();
-            emotions.NegativeMood = 1;
+            emotions.NegativeMood = emotions.NegativeMood == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.G)){
-            resetData();
-            emotions.Sad = 1;
+            emotions.Sad = emotions.Sad == 1 ? 0 : 1;
         }
         if(Input.GetKeyDown(KeyCode.H)){
-            resetData();
-            emotions.Hate = 1;
+            emotions.Hate = emotions.Hate == 1 ? 0 : 1;
         }
     }
 
