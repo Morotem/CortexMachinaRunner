@@ -17,18 +17,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SraightForward.unity
     guid: d70389ecf3e93d7459fb93e518bd2870
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/ChillRun.unity
     guid: b4d3b1afee1f1004db8bbec596a4bb03
+  - enabled: 1
+    path: Assets/Scenes/EmotionOdyssey.unity
+    guid: 4d5c022e83679dd4dbf56d5360f7b486
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/SideStepChallenge.unity
-    guid: 389386d36d10478489ed88be2479c7a0
+    guid: dea97b10a97d0ea4daf035067e58a5a0
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
